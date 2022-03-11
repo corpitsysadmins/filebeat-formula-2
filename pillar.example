@@ -38,84 +38,18 @@ filebeat:
       ssl_ca_path: /etc/filebeat/certs/ca.crt
       ssl_ca: |
         -----BEGIN CERTIFICATE-----
-        MIIDnzCCAoegAwIBAgIBATANBgkqhkiG9w0BAQsFADA6MRgwFgYDVQQKEw9DT1JQ
-        Lk1PRE1FRC5DT00xHjAcBgNVBAMTFUNlcnRpZmljYXRlIEF1dGhvcml0eTAeFw0x
-        MzExMDYxNzA4MjlaFw0zMzExMDYxNzA4MjlaMDoxGDAWBgNVBAoTD0NPUlAuTU9E
-        TUVELkNPTTEeMBwGA1UEAxMVQ2VydGlmaWNhdGUgQXV0aG9yaXR5MIIBIjANBgkq
-        hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw93tQXbrU/YzOBICVxnczXOhezZqVe1Z
-        cvAcvPvVfRUt/wtUPk2VjSkDn0NTgh+U/srNiUZRgdP6/0rY7M7fbbjbUDQi+0Gk
-        vdQsimo7nK2d4SOsXcq2uvsG+18xL22apZOdynJCqzYGaZS30LH4yXaf2wdQYv5+
-        Z+a8ezzk8+gMVTlDnh+AGA+ji4uK2/8Oldi1iht9cc/QQi2JT3TCKlD5IlV82ObE
-        FrGoyFPVKBL2Qj/OXy2OvWSJn3jw0Q3KUwiMLu+PlS+Ns+k08dUC9Y+4M0ECbkqr
-        xxHtqOWFg9hiEcmRhrP0JOkeO61hjjo9BF4yfZKdOY0umpQ5N9uRTwIDAQABo4Gv
-        MIGsMB8GA1UdIwQYMBaAFPTQutwX8p6VmZQr/LkDKTUTkEVwMA8GA1UdEwEB/wQF
-        MAMBAf8wDgYDVR0PAQH/BAQDAgHGMB0GA1UdDgQWBBT00LrcF/KelZmUK/y5Ayk1
-        E5BFcDBJBggrBgEFBQcBAQQ9MDswOQYIKwYBBQUHMAGGLWh0dHA6Ly9mcmVlaXBh
-        LW9uZS5jb3JwLm1vZG1lZC5jb206ODAvY2Evb2NzcDANBgkqhkiG9w0BAQsFAAOC
-        AQEACe1bpWS2Vptv/k+O2MpGKx/vxXfmwajKfdJDhL802dAwk0agThQhvqJApwWz
-        hXumIOav7ECx+WyYJaXGrsw2YcYtddL35KvslSgyyQl3rTwXUp+cZImwAuPZkSxY
-        09td8heYmZqOoJu114f4uZZuFNhs3+qvGa385Zplp/pM1tRhU5fu2SIk3GudZyJS
-        SyearSXYI3dKwMexnpxPDlmmuRDco2TQuCXBSGaVpjQqzfT97Aney2axyX91E+U6
-        3zLKLVtKbJF8zLZCY7H2U7G416bFHpwUtxpTSMbgpYFAuAs+z2vPsZ+ZeUi/5vWl
-        VNIFn2/Cfs80yHQW3VlS2vfT9A==
+
         -----END CERTIFICATE-----
 
       ssl_cert_path: /etc/filebeat/certs/server.crt
       ssl_cert: |
         -----BEGIN CERTIFICATE-----
-        MIIEYTCCA0mgAwIBAgIFAIAAAFYwDQYJKoZIhvcNAQELBQAwOjEYMBYGA1UEChMP
-        Q09SUC5NT0RNRUQuQ09NMR4wHAYDVQQDExVDZXJ0aWZpY2F0ZSBBdXRob3JpdHkw
-        HhcNMjAxMjIyMDY0MTI2WhcNMjIxMjIzMDY0MTI2WjBGMRgwFgYDVQQKEw9DT1JQ
-        Lk1PRE1FRC5DT00xKjAoBgNVBAMTIWJvY2EtbG9nY29sbGVjdC0xLmNvcnAubW9k
-        bWVkLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALmNYdSQU+yl
-        fcw4eZzjSK2FfSm+CJZtDmnOLUmU37Gan5Gv/H3ha8f52KVd2R7ISp0eaNQ2O285
-        nBTYY2xeYnut/t/X/GhcvQ/fRyo7h07VSBGeLFMB6wqCyulnpGrzB+lOXu+Od/zJ
-        wwInmP8tiGIxH8zp7GWCEhNEqZohYZVfxn6TIh6JTWi+jUA+FjBQDTAZmpMNIGGF
-        MQNfGrbdFVT825mnLBraExHM1ChCio4ygh0xKFvOC/2y3dFvflbwFxiPIT5DcpXs
-        opDmg0/PeNifZ4bdJB15XtAB3EtLsZSY/93D9nDVWNVuPWiL6OU/VP/DdRPd79r+
-        bYPgsfE2HX8CAwEAAaOCAWAwggFcMB8GA1UdIwQYMBaAFPTQutwX8p6VmZQr/LkD
-        KTUTkEVwMEEGCCsGAQUFBwEBBDUwMzAxBggrBgEFBQcwAYYlaHR0cDovL2lwYS1j
-        YS5jb3JwLm1vZG1lZC5jb20vY2Evb2NzcDAOBgNVHQ8BAf8EBAMCBPAwHQYDVR0l
-        BBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMHoGA1UdHwRzMHEwb6A3oDWGM2h0dHA6
-        Ly9pcGEtY2EuY29ycC5tb2RtZWQuY29tL2lwYS9jcmwvTWFzdGVyQ1JMLmJpbqI0
-        pDIwMDEOMAwGA1UEChMFaXBhY2ExHjAcBgNVBAMTFUNlcnRpZmljYXRlIEF1dGhv
-        cml0eTAdBgNVHQ4EFgQUeep+sx0INkFv9VVdalm/hV06lqYwLAYDVR0RBCUwI4Ih
-        Ym9jYS1sb2djb2xsZWN0LTEuY29ycC5tb2RtZWQuY29tMA0GCSqGSIb3DQEBCwUA
-        A4IBAQBmfJZT5Azz28SFzyhqn3LLuk/rfJBEw10Jyz4erDJpAw8pLWogB0saIfmc
-        drDarHZr9U2CcAr33r+3HGjkKy8nAb2I1L9Q9DzBMJPhzjuvrQ2sADU6MM9r1BHD
-        AHeblmSM+HoCf0Jd0IAW5Rnjdd77i93gyzD57MBCULJ6uoWVtbVtYzcctVR8IG0T
-        ZGjSr+mCqquPJ30yISHG66Wlm18xh+m7jF22tTfmmsGlt3DWgGAbYTwemN+61T4j
-        zgGSnA/WX5ax+uVes+mRJFur2a33G/ZpqPSoSzbBsB8ET1okxQsCEKRb1nZhC4Xs
-        3cJQPQLZRv44Zg51TUerSxaoSNRX
+
         -----END CERTIFICATE-----
 
       ssl_key_path: /etc/filebeat/certs/server.key
       ssl_key: |
          -----BEGIN RSA PRIVATE KEY-----
-         MIIEogIBAAKCAQEAuY1h1JBT7KV9zDh5nONIrYV9Kb4Ilm0Oac4tSZTfsZqfka/8
-         feFrx/nYpV3ZHshKnR5o1DY7bzmcFNhjbF5ie63+39f8aFy9D99HKjuHTtVIEZ4s
-         UwHrCoLK6WekavMH6U5e7453/MnDAieY/y2IYjEfzOnsZYISE0SpmiFhlV/GfpMi
-         HolNaL6NQD4WMFANMBmakw0gYYUxA18att0VVPzbmacsGtoTEczUKEKKjjKCHTEo
-         W84L/bLd0W9+VvAXGI8hPkNyleyikOaDT8942J9nht0kHXle0AHcS0uxlJj/3cP2
-         cNVY1W49aIvo5T9U/8N1E93v2v5tg+Cx8TYdfwIDAQABAoIBAE5rlHcz8GRJpRsU
-         m0FVRbggfL+RkyuQN9E71CQPCWOUh/AYwsuo49aGn6t0OHksCWzSF1fo+8GMRY0B
-         zzNTyKeg5+FO9VxeJYF5yiftNMh6l5Tqlq0WWHH+ySdQKEsTH7rY5oK0Yb2yv/o/
-         JghjBAsL2/bMvp5AFMeT82IyzX1FXX6Q/Vp+DysFgoAJ5tAmK33BBfTCRgcqwRuO
-         F+bxFzjaMb9X6gNjCIFgWWsttWkNpX0mdqQ12Cub+5TFI7AHnVWc7UpyFvDL/XE+
-         0oKU5t2HR3OZieBExKs8VFYfezvP5JHPEc53IiX6N/PwzNHk2rHvXJS14JbnezHZ
-         esUnKTECgYEA9xu2PyqNVvCB5pJK/30mucG4/DFyHuk32upQA9gycm09fyQJXaHb
-         Bb+n1v+oGBSfg4iE0wzkb11ymE4s8Wd6vR/BUglXjDQktNqaVBe2UrXntPKgIq9o
-         EYLtYo3+9JwCQUnT5ZcQyVkLqv9rT0YwOFHvwf+7Isctm5g+3WW2PasCgYEAwDqi
-         gujJpkV4eSem1G4qfmjh8WsWEns75v/oep/O3ZiQEh3e73mYvPGk+OlRhJ7GYMQk
-         sQskR6xuavThktJCJ1RzWn9nVJ5sBLusn5hyrWfQQVTOiyVJLHi2zAyjsq5vSzJb
-         uf5XU5DAkbmo8GcD55UhXn1/KLghBqCrO8KDA30CgYA/e/IdVkxLiqyE1Q7Jhpid
-         XoSs3fMot9fuuQXnhvKm7SPAdzykvoFrf6qaFMJVtW6ptzgQlJ5XchWPxX3MYz5o
-         OjFLZzUDwx2vDP5bHmBr7Wni1faIErJU1WMxT7OxmicGKPZ0ZJQedm8F9mrWSfz3
-         ay2ClLW6IJu5/qof7RKd0wKBgEFP6sVlyJXIxs0LTuCgaam3gwUeqEoxOsIasudv
-         Ar9BxbmSEpv1CZMw2yeDRqIzvB1Gp1zL91Cu4nlOqJHVBIsOY38dCIO0q+jTxywW
-         hOgr/JMl+GNIkNseTKV5qejc4Y2AF7BTHWKULQmWNjMwHSCDB+pt41V3cikpT+Sn
-         CxKVAoGAHoJEPj6un+7x/dSGa2vPrzccv2bYckmJG4fxhK8ZmTtfvpbeFHFeNFVK
-         MtmS1ki4okH70qDMkZbArDyquZUlQoWgzOR0oCNX7h27MWhkxL5K4hkNYXHEfTaQ
-         w+noajeTyhiy8Cw2+/BcuRos6dWFqVR3IepaMAIWM9Nr+WFopQA=
+ 
          -----END RSA PRIVATE KEY-----
 
