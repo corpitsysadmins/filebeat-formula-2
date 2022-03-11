@@ -43,7 +43,7 @@
     - user: root
     - group: root
     - mode: 644
-    - contents_pillar: filebeat:logstash:tls:ssl_key
+    - contents_pillar: filebeat:logstash:tls:ssl_ca
     - watch_in:
       - filebeat.config
 {% endif %}
