@@ -11,12 +11,12 @@
 {% if salt['pillar.get']('filebeat:logstash:tls:enabled', False) and ssl_cert and ssl_cert_path and managed_cert %}
 {{ ssl_cert_path }}:
   file.managed:
-    - source: {{ ssl_cert }}
     - template: jinja
     - makedirs: True
     - user: root
     - group: root
     - mode: 644
+    - contents_pillar: filebeat:logstash:tls:ssl_cert
     - watch_in:
       - filebeat.config
 {% endif %}
@@ -25,12 +25,12 @@
 {% if salt['pillar.get']('filebeat:logstash:tls:enabled', False) and ssl_key and ssl_key_path and managed_cert %}
 {{ ssl_key_path }}:
   file.managed:
-    - source: {{ ssl_key }}
     - template: jinja
     - makedirs: True
     - user: root
     - group: root
     - mode: 644
+    - contents_pillar: filebeat:logstash:tls:ssl_key
     - watch_in:
       - filebeat.config
 {% endif %}
@@ -38,12 +38,12 @@
 {% if salt['pillar.get']('filebeat:logstash:tls:enabled', False) and ssl_ca and ssl_ca_path and managed_cert %}
 {{ ssl_ca_path }}:
   file.managed:
-    - source: {{ ssl_ca }}
     - template: jinja
     - makedirs: True
     - user: root
     - group: root
     - mode: 644
+    - contents_pillar: filebeat:logstash:tls:ssl_key
     - watch_in:
       - filebeat.config
 {% endif %}
