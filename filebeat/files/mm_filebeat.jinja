@@ -1,0 +1,46 @@
+{%- set filebeat = salt['pillar.get']('filebeat', {}) %}
+filebeat.inputs:
+{%- set log_paths = filebeat.get('log_paths', ['/var/log/auth.log', '/var/log/syslog']) %}
+{%- for log_path in log_paths %}
+- type: {{ log_path.get('type', 'filestream') }}
+  paths:
+{%- for path in log_path.paths %}
+    - {{ path }}
+{%- endfor %}
+  tags: {{ log_path.get('tag', '{}') }}
+
+{%- if 'exclude_files' in log_path %}
+{%- for exfile in log_path.exclude_files %}
+  exclude_files: [ {{ exfile }} ]
+{%- endfor %}
+{%- endif %}
+{%- if 'processors' in log_path %}
+  processors:
+{%- for proc in log_path.processors %}
+{%- if 'add_tags' in proc %}
+   - add_tags:
+       tags: {{ proc.add_tags.tags }}
+       target: {{ proc.add_tags.target }}
+       when:
+         contains:
+           message: {{ proc.add_tags.when.contains.message }}
+{%- endif %}
+{%- endfor %}
+{%- endif %}
+{%- endfor %}
+###################################################################
+filebeat.config.modules:
+    path: ${path.config}/modules.d/*.yml
+##################################################################
+{%- set logstash = filebeat.get('logstash', {}) %}
+{%- set ssl_key = filebeat.get('logstash.tls.ssl_key', {}) %}
+{%- set ssl_key_path = filebeat.get('logstash.tls.ssl_key_path', {}) %}
+{%- if logstash.get('enabled', False) %}
+output.logstash:
+    hosts: {{ logstash.server }}
+{%- if logstash.tls.get('ssl_cert_path') %}
+    ssl.certificate_authorities: ["{{ logstash.tls.ssl_ca_path }}"]
+    ssl.certificate: "{{ logstash.tls.ssl_cert_path }}"
+    ssl.key: "{{ logstash.tls.ssl_key_path }}"
+{%- endif %}
+{%- endif %}
